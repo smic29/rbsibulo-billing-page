@@ -1,0 +1,14 @@
+.BillTo-fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.BillTo-fieldset label {
+    display: flex;
+    flex-direction: column;
+}
+
+.BillTo-fieldset input, textarea {
+    padding: 10px;
+    resize: none;
+}
