@@ -1,6 +1,7 @@
 import './PrintPreview.css';
 import letterhead from '../Assets/Letterhead.jpg'
 import FormatService from '../Services/Services';
+import html2pdf from 'html2pdf.js';
 
 function PrintPreview(props) {
     const {
@@ -15,9 +16,24 @@ function PrintPreview(props) {
     const totalAmount = items.reduce((total, item) => 
     total + (item.unitPrice * item.quantity * item.exchangeRate), 0)
 
+    const downloadPDF = () => {
+        const content = document.getElementById('printfile');
+        const pdfOptions = {
+            margin: 0,
+            filename: 'test.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 1 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        };
+
+        html2pdf().from(content)
+        .set(pdfOptions)
+        .save();
+    }
+
     return (
         <div className='overlay'>
-            <div className='print-content'>
+            <div className='print-content' id='printfile'>
                 <img src={letterhead} className='print-letterhead'/>
                 <div className='print-billing-details'>
                     <fieldset>
@@ -89,6 +105,10 @@ function PrintPreview(props) {
             <button className='close-preview'
             onClick={() => setShowPrev(false)}
             >X</button>
+            <button className='print-page-button'
+            onClick={downloadPDF}>
+                Save as PDF
+            </button>
         </div>
     )
 }

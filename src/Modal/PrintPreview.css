@@ -17,6 +17,12 @@
     margin: 1rem;
 }
 
+.print-page-button {
+    position: absolute;
+    right: 5%;
+    top: 45%;
+}
+
 .print-content {
     background-color: white;
     width: 8.5in;
@@ -26,6 +32,10 @@
     transform: scale(0.8);
     padding: 5px;
     font-size: 1rem;
+}
+
+#printfile {
+    page-break-before: auto;
 }
 
 .print-letterhead {
