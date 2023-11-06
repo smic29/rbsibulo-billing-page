@@ -19,6 +19,14 @@ tr {
     grid-template-columns: 2fr repeat(5, 1fr) 0.25fr;
 }
 
+.table-data-rows {
+    padding-right: 9.5px;
+}
+
+.description {
+    width: 80%;
+}
+
 .currency,
  .qty,
  .ex-rate {
@@ -59,7 +67,6 @@ tr {
 
 .tr-dataEntry {
     position: relative;
-    padding: 5px;
 }
 
 .total-words {

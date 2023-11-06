@@ -41,13 +41,13 @@ function Table(props) {
                 </thead>
                 <tbody>
                     {items.map((item, index) => (
-                        <div className='tr-dataEntry'>
+                        <div className='tr-dataEntry'
+                        key={index}>
                         <span class="material-symbols-outlined del-btn"
                         onClick={() => delRow(index)}>
                             delete
                         </span>
-                        <tr key={index}
-                        >
+                        <tr className='table-data-rows'>
                             <td>
                                 <input 
                                 type='text'

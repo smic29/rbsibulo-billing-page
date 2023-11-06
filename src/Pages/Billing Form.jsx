@@ -9,7 +9,7 @@ function BillingForm() {
     const [ items, setItems ] = useState([
         {
             description: '',
-            currency: '',
+            currency: 'PHP',
             unitPrice: 0,
             quantity: 0,
             exchangeRate: 1,
@@ -28,8 +28,8 @@ function BillingForm() {
     const [ showPrev, setShowPrev ] = useState(false);
 
     return(
-        <div>
-            <form>
+        <div className='BILLING-FORM-CONTAINER'>
+            <div>
                 <BillTo billTo={billTo} setBillTo={setBillTo} 
                 address={address} setAddress={setAddress}/>
                 <CargoDetails 
@@ -40,8 +40,9 @@ function BillingForm() {
                 eta={eta} setEta={setEta}
                 jobDes={jobDes} setJobDes={setJobDes}/>
                 <Table items={items} setItems={setItems}/>
-            </form>
-            <button onClick={() => setShowPrev(!showPrev)}>Preview</button>
+            </div>
+            <button onClick={() => setShowPrev(!showPrev)}
+            className='publish-button'>Publish</button>
             {showPrev && <PrintPreview 
             items={items} billTo={billTo}
             address={address} pol={pol}

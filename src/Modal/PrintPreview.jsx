@@ -44,6 +44,7 @@ function PrintPreview(props) {
                     <fieldset>
                         <legend>Billing Reference</legend>
                         <p>Date: {`${currentDay}/${currentMonth}/${currentYear}`}</p>
+                        <p>Reference #: {Date.now()}</p>
                     </fieldset>
                     <fieldset className='print-cargo-details'>
                         <legend>Cargo Details</legend>
@@ -88,7 +89,8 @@ function PrintPreview(props) {
                             <tfoot>
                                 <tr>
                                     <div className='print-totalWords'>
-                                        {FormatService.wordConvert(totalAmount)}
+                                        {totalAmount === 0 ?
+                                        '': FormatService.wordConvert(totalAmount)}
                                     </div>
                                     <div className='print-subtotal'>
                                         <span>SubTotal :</span>

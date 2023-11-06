@@ -1,0 +1,13 @@
+.BILLING-FORM-CONTAINER {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.publish-button {
+    width: min-content;
+    align-self: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}

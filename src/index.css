@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +8,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins';
+}
+
+body::-webkit-scrollbar{
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb{
+  border-radius:0.5rem;
+  background-color: rgba(0,0,0,0.3);
 }
 
 code {
