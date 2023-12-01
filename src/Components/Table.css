@@ -9,7 +9,7 @@ th {
     background-color: whitesmoke;
 }
 
-th, td {
+th {
     text-align: center;
     border-right: 2px solid lightgray;
 }
@@ -31,12 +31,10 @@ tr {
  .qty,
  .ex-rate {
     width: 50%;
-    text-align: center;
 }
 
 .unit-price {
-    width: 50%;
-    text-align: center;
+    width: 70%;
 }
 
 .vat {

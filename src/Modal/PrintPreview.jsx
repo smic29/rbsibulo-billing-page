@@ -35,6 +35,7 @@ function PrintPreview(props) {
         <div className='overlay'>
             <div className='print-content' id='printfile'>
                 <img src={letterhead} className='print-letterhead'/>
+                {/* <h1>Quotation Form</h1> */}
                 <div className='print-billing-details'>
                     <fieldset>
                         <legend>To</legend>
@@ -57,7 +58,7 @@ function PrintPreview(props) {
                     </fieldset>
                     <fieldset className='print-table'>
                         <legend>We are billing you for the following</legend>
-                        <table>
+                        <table className='table-height'>
                             <thead>
                                 <tr>
                                     <th>Description</th>
@@ -70,7 +71,7 @@ function PrintPreview(props) {
                             </thead>
                             <tbody>
                                 {items.map((item, index) => (
-                                    <tr key={index}>
+                                    <tr className='text-center' key={index}>
                                         <td>{item.description}</td>
                                         <td>{item.currency}</td>
                                         <td>{item.unitPrice}</td>

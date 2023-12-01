@@ -26,22 +26,22 @@ function Table(props) {
         setItems(updatedItems);
     }
     return (
-        <div>
-            <table>
+        <div className='table-responsive'>
+            <table className='table table-striped'>
                 <thead>
                     <tr>
-                        <th >Description</th>
-                        <th >Currency</th>
-                        <th >Unit Price</th>
-                        <th >QTY</th>
-                        <th >Ex-Rate</th>
-                        <th >Amount</th>
-                        <th className='vat' >VAT</th>
+                        <th scope='col' >Description</th>
+                        <th scope='col'>Currency</th>
+                        <th scope='col'>Unit Price</th>
+                        <th scope='col'>QTY</th>
+                        <th scope='col'>Ex-Rate</th>
+                        <th scope='col'>Amount</th>
+                        <th scope='col' className='vat' >VAT</th>
                     </tr>
                 </thead>
                 <tbody>
                     {items.map((item, index) => (
-                        <div className='tr-dataEntry'
+                        <div className='tr-dataEntry text-center d-flex align-items-center'
                         key={index}>
                         <span class="material-symbols-outlined del-btn"
                         onClick={() => delRow(index)}>
@@ -51,7 +51,7 @@ function Table(props) {
                             <td>
                                 <input 
                                 type='text'
-                                className='description'
+                                className='form-control-sm'
                                 value={item.description}
                                 onChange={(e) => {
                                     const newItems = [...items];
@@ -61,7 +61,7 @@ function Table(props) {
                             </td>
                             <td>
                                 <select
-                                className='currency'
+                                className='form-control-sm'
                                 value={item.currency}
                                 onChange={(e) => {
                                     const newItems = [...items];
@@ -75,7 +75,7 @@ function Table(props) {
                             <td>
                                 <input 
                                 type='number'
-                                className='unit-price'
+                                className='form-control-sm text-center unit-price'
                                 min={0}
                                 value={item.unitPrice}
                                 onChange={(e) => {
@@ -88,7 +88,7 @@ function Table(props) {
                                 <input 
                                 type='number'
                                 value={item.quantity}
-                                className='qty'
+                                className='form-control-sm text-center qty'
                                 onChange={(e) => {
                                     const newItems = [...items];
                                     newItems[index].quantity = parseFloat(e.target.value) ? parseFloat(e.target.value) : 0
@@ -99,7 +99,7 @@ function Table(props) {
                                 <input 
                                 type='number'
                                 value={item.currency === 'PHP' ? 1 : item.exchangeRate}
-                                className='ex-rate'
+                                className='form-control-sm text-center ex-rate'
                                 disabled={item.currency === 'PHP'}
                                 onChange={(e) => {
                                     const newItems = [...items];
@@ -108,7 +108,7 @@ function Table(props) {
                                     setItems(newItems)
                                 }}/>
                             </td>
-                            <td className='amount'>
+                            <td className='d-flex align-items-center justify-content-center'>
                                 {FormatService.formatCurrency(
                                     item.unitPrice * item.quantity * (item.currency === 'PHP' ? 1 : item.exchangeRate),
                                     )}
