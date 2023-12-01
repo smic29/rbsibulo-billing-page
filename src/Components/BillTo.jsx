@@ -10,22 +10,26 @@ function BillTo(props) {
 
     return (
         <div>
-            <fieldset className='BillTo-fieldset'>
+            <fieldset className='BillTo-fieldset p-2 mb-2 rounded'>
                 <legend>Bill To:</legend>
-                <label>
-                    <span>Company Name:</span> 
+                <div className="form-floating mb-3">
                     <input type='text'
+                    className='form-control'
+                    id='companyName'
+                    placeholder=''
                     value={billTo}
                     onChange={(e) => setBillTo(e.target.value)}/>
-                </label>
-                <label>
-                    <span>Address:</span> 
+                    <label htmlFor='companyName'>Company Name</label>
+                </div>
+                <div className="form-floating">
                     <textarea
-                    cols={50}
-                    rows={3} 
+                    className='form-control'
+                    placeholder=''
+                    id='address'
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}/>
-                </label>
+                    <label htmlFor='address'>Address</label>
+                </div>
             </fieldset>
         </div>
     )

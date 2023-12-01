@@ -12,3 +12,7 @@
     padding: 10px;
     resize: none;
 }
+
+#address {
+    height: 5rem;
+}

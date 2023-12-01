@@ -15,3 +15,11 @@
   margin-top: 15%;
   padding: 10px;
 }
+
+fieldset, legend {
+  all: revert;
+}
+
+.form-floating label {
+  z-index: 0;
+}

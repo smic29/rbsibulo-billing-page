@@ -1,4 +1,4 @@
-.CargoDetails-fieldset {
+/* .CargoDetails-fieldset {
     display: grid;
     grid-template-columns: 1fr 1fr auto;
     grid-template-rows: 1fr 1fr 1fr;
@@ -54,4 +54,4 @@
 
 .CargoDetails-jobDescription textarea{
     width: 99%;
-}
+} */
