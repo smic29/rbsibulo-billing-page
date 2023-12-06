@@ -26,8 +26,8 @@ function Table(props) {
         setItems(updatedItems);
     }
     return (
-        <div className='table-responsive'>
-            <table className='table table-striped'>
+        <div className='table-responsive container-fluid'>
+            <table className='table table-striped box-shadow'>
                 <thead>
                     <tr>
                         <th scope='col' >Description</th>

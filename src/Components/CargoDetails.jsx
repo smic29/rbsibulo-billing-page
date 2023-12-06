@@ -12,7 +12,7 @@ function CargoDetails(props) {
 
     return (
         <div className='container-fluid'>
-            <fieldset className='rounded'>
+            <fieldset className='rounded box-shadow'>
                 <legend>Cargo Details</legend>
                 <div className="row">
                         <div className="col-6">
@@ -40,7 +40,7 @@ function CargoDetails(props) {
                 </div>
                 <div className="row my-3 align-items-center">
                         <div className="col-9">
-                                <div className='form-floating'>
+                                <div className='form-floating mb-2'>
                                         <input type='text'
                                         className='form-control'
                                         id='voyage'

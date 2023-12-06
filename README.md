@@ -9,5 +9,5 @@ A simple billing form generator for my wife's business.
 ## To do list before first deploy:
 - [ ] Fix Print layout
 - [ ] UI fixes
-- [ ] Form switch between Quotation and Billing
-- [ ] File name changes. Currently just saving as test.
+- [x] Form switch between Quotation and Billing
+- [x] File name changes. Currently just saving as test.

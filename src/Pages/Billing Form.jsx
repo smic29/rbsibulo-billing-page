@@ -26,12 +26,14 @@ function BillingForm() {
     const [ eta, setEta ] = useState('');
     const [ jobDes, setJobDes ] = useState('');
     const [ showPrev, setShowPrev ] = useState(false);
+    const [ docType, setDocType ] = useState('');
 
     return(
         <div className='BILLING-FORM-CONTAINER'>
             <div>
                 <BillTo billTo={billTo} setBillTo={setBillTo} 
-                address={address} setAddress={setAddress}/>
+                address={address} setAddress={setAddress} docType={docType}
+                setDocType={setDocType}/>
                 <CargoDetails 
                 pol={pol} setPol={setPol}
                 pod={pod} setPod={setPod}
@@ -47,7 +49,7 @@ function BillingForm() {
             items={items} billTo={billTo}
             address={address} pol={pol}
             pod={pod} voyage={voyage} bol={bol} eta={eta} jobDes={jobDes} 
-            setShowPrev={setShowPrev}/>}
+            setShowPrev={setShowPrev} docType={docType}/>}
         </div>
     )
 }

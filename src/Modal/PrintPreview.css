@@ -10,6 +10,10 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
+.print-billing-details fieldset legend {
+    font-weight: bold;
+}
+
 .table-height {
     min-height: 450px;
 }

@@ -5,7 +5,8 @@ import html2pdf from 'html2pdf.js';
 
 function PrintPreview(props) {
     const {
-        items, billTo, address, pol, pod, voyage, bol, eta, jobDes, setShowPrev
+        items, billTo, address, pol, pod, voyage, bol, eta, jobDes, setShowPrev,
+        docType
     } = props; 
 
     const currentDate = new Date();
@@ -16,11 +17,13 @@ function PrintPreview(props) {
     const totalAmount = items.reduce((total, item) => 
     total + (item.unitPrice * item.quantity * item.exchangeRate), 0)
 
+    const fileName = `${currentYear.toString().slice(-2)}${currentMonth}${currentDay}-${billTo.slice(0,5)}`
+
     const downloadPDF = () => {
         const content = document.getElementById('printfile');
         const pdfOptions = {
             margin: 0,
-            filename: 'test.pdf',
+            filename: `${fileName}.pdf`,
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 1 },
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
@@ -35,7 +38,7 @@ function PrintPreview(props) {
         <div className='overlay'>
             <div className='print-content' id='printfile'>
                 <img src={letterhead} className='print-letterhead'/>
-                {/* <h1>Quotation Form</h1> */}
+                <h1 className='ms-2 mt-3'>{docType !== '' ? docType.toUpperCase() : 'form'}</h1>
                 <div className='print-billing-details'>
                     <fieldset>
                         <legend>To</legend>
@@ -45,7 +48,7 @@ function PrintPreview(props) {
                     <fieldset>
                         <legend>Billing Reference</legend>
                         <p>Date: {`${currentDay}/${currentMonth}/${currentYear}`}</p>
-                        <p>Reference #: {Date.now()}</p>
+                        <p>Reference #: {fileName}</p>
                     </fieldset>
                     <fieldset className='print-cargo-details'>
                         <legend>Cargo Details</legend>
