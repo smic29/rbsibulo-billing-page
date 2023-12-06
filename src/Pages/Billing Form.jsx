@@ -43,8 +43,12 @@ function BillingForm() {
                 jobDes={jobDes} setJobDes={setJobDes}/>
                 <Table items={items} setItems={setItems}/>
             </div>
-            <button onClick={() => setShowPrev(!showPrev)}
-            className='publish-button'>Publish</button>
+            <div className="col-6 mx-auto text-center">
+                <button 
+                onClick={() => setShowPrev(!showPrev)}
+                className='btn btn-primary'>Publish</button>
+            </div>
+            
             {showPrev && <PrintPreview 
             items={items} billTo={billTo}
             address={address} pol={pol}

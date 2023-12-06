@@ -17,7 +17,7 @@ function PrintPreview(props) {
     const totalAmount = items.reduce((total, item) => 
     total + (item.unitPrice * item.quantity * item.exchangeRate), 0)
 
-    const fileName = `${currentYear.toString().slice(-2)}${currentMonth}${currentDay}-${billTo.slice(0,5)}`
+    const fileName = `${docType.slice(0,1).toUpperCase()}${currentYear.toString().slice(-2)}${currentMonth}${currentDay}-${billTo.slice(0,5)}`
 
     const downloadPDF = () => {
         const content = document.getElementById('printfile');
@@ -46,9 +46,9 @@ function PrintPreview(props) {
                         <p>{address}</p>
                     </fieldset>
                     <fieldset>
-                        <legend>Billing Reference</legend>
+                        <legend>Reference</legend>
                         <p>Date: {`${currentDay}/${currentMonth}/${currentYear}`}</p>
-                        <p>Reference #: {fileName}</p>
+                        <p>Reference No: {fileName}</p>
                     </fieldset>
                     <fieldset className='print-cargo-details'>
                         <legend>Cargo Details</legend>
@@ -108,10 +108,10 @@ function PrintPreview(props) {
                     </fieldset>
                 </div>
             </div>
-            <button className='close-preview'
+            <button className='close-preview btn btn-danger'
             onClick={() => setShowPrev(false)}
-            >X</button>
-            <button className='print-page-button'
+            >&times;</button>
+            <button className='print-page-button btn btn-primary'
             onClick={downloadPDF}>
                 Save as PDF
             </button>

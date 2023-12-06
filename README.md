@@ -11,3 +11,5 @@ A simple billing form generator for my wife's business.
 - [ ] UI fixes
 - [x] Form switch between Quotation and Billing
 - [x] File name changes. Currently just saving as test.
+- [ ] Fix Responsiveness
+- [ ] Refactor code

@@ -48,19 +48,6 @@ tr {
 
 .add-row {
     grid-column: 1 / 12;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: .75rem;
-    padding: .125rem;
-    margin-bottom: 1rem;
-    width: 20%;
-    justify-self: center;
-    cursor: pointer;
-    user-select: none;
-}
-
-.add-row:hover {
-    background-color: lightblue;
 }
 
 .tr-dataEntry {

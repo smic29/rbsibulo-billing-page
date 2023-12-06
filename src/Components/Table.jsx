@@ -141,8 +141,11 @@ function Table(props) {
                         </div>
                     </tr>
                     <tr>
-                        <span className='add-row'
-                        onClick={addRow}>Add Row</span>
+                        <div className="add-row text-center mx-auto col-2">
+                            <button 
+                            className='btn btn-success'
+                            onClick={addRow}>Add Row</button>
+                        </div>
                     </tr>
                 </tfoot>
             </table>
