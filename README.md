@@ -2,6 +2,9 @@
 
 A simple billing form generator for my wife's business. 
 
+# GH-pages Link:
+- [Billing Page](https://smic29.github.io/rbsibulo-billing-page/)
+
 ## Made using:
 - Create React App
 - Bootstrap 5
