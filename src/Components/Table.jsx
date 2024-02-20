@@ -36,7 +36,7 @@ function Table(props) {
                         <th scope='col'>QTY</th>
                         <th scope='col'>Ex-Rate</th>
                         <th scope='col'>Amount</th>
-                        <th scope='col' className='vat' >VAT</th>
+                        {/* <th scope='col' className='vat' >VAT</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -113,7 +113,7 @@ function Table(props) {
                                     item.unitPrice * item.quantity * (item.currency === 'PHP' ? 1 : item.exchangeRate),
                                     )}
                             </td>
-                            <td className='vat'>
+                            {/* <td className='vat'>
                                 <input 
                                 type='checkbox'
                                 checked={item.vat}
@@ -123,7 +123,7 @@ function Table(props) {
                                     newItems[index].vat = e.target.checked
                                     setItems(newItems)
                                 }}/>
-                            </td>
+                            </td> */}
                         </tr>
                         </div>
                     ))}
