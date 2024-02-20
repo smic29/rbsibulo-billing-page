@@ -5,6 +5,9 @@ A simple billing form generator for my wife's business.
 # GH-pages Link:
 - [Billing Page](https://smic29.github.io/rbsibulo-billing-page/)
 
+## Latest Deploy:
+- 02/20/24 - Removed the VAT Column.
+
 ## Made using:
 - Create React App
 - Bootstrap 5
