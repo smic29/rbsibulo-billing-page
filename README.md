@@ -12,7 +12,14 @@ A simple billing form generator for my wife's business.
 - Create React App
 - Bootstrap 5
 
-## To do list before first deploy:
+
+## Change History:
+- 03/11/24
+  - Changed 'billing' to 'billing statement'
+  - Added note at preview page.
+  - Changed letterhead.
+
+## TODO:
 - [ ] Fix Print layout
 - [ ] UI fixes
 - [x] Form switch between Quotation and Billing

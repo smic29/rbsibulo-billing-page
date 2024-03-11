@@ -17,7 +17,9 @@ function PrintPreview(props) {
     const totalAmount = items.reduce((total, item) => 
     total + (item.unitPrice * item.quantity * item.exchangeRate), 0)
 
-    const fileName = `${docType.slice(0,1).toUpperCase()}${currentYear.toString().slice(-2)}${currentMonth}${currentDay}-${billTo.slice(0,5)}`
+    const fileName = `${docType.slice(0,1).toUpperCase()}${currentYear.toString().slice(-2)}${currentMonth}${currentDay}-${billTo.slice(0,2).split('').map((char) => {
+        return char.charCodeAt(0);
+    }).join('')}`
 
     const downloadPDF = () => {
         const content = document.getElementById('printfile');
@@ -105,6 +107,11 @@ function PrintPreview(props) {
                                 </tr>
                             </tfoot>
                         </table>
+                            <small>
+                                <strong>
+                                    This is not valid for input tax claim
+                                </strong>
+                            </small>
                     </fieldset>
                 </div>
             </div>

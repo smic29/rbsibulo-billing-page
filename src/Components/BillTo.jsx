@@ -43,7 +43,7 @@ function BillTo(props) {
                     onChange={handleSelect}>
                         <option selected disabled>Select Document Type</option>
                         <option value={'quotation'}>Quotation</option>
-                        <option value={'billing'}>Billing</option>
+                        <option value={'billing statement'}>Billing Statement</option>
                         <option value={'statement of account'}>Statement of Account</option>
                     </select>
                 </fieldset>
