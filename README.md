@@ -1,6 +1,7 @@
 # RBSibulo Logistics Services Billing Form:
 
-A simple billing form generator for my wife's business. 
+A simple billing form generator for my wife's business. To future me, deploying to gh-page:
+`npm run deploy`
 
 # GH-pages Link:
 - [Billing Page](https://smic29.github.io/rbsibulo-billing-page/)
