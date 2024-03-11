@@ -7,6 +7,7 @@ A simple billing form generator for my wife's business.
 
 ## Latest Deploy:
 - 02/20/24 - Removed the VAT Column.
+- 03/11/25 - Change History 03/11/24
 
 ## Made using:
 - Create React App
