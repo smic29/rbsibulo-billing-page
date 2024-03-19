@@ -8,7 +8,8 @@ A simple billing form generator for my wife's business. To future me, deploying 
 
 ## Latest Deploy:
 - 02/20/24 - Removed the VAT Column.
-- 03/11/25 - Change History 03/11/24
+- 03/11/24 - Change History 03/11/24
+- 03/19/24 - Change History 03/19/24
 
 ## Made using:
 - Create React App
@@ -16,6 +17,8 @@ A simple billing form generator for my wife's business. To future me, deploying 
 
 
 ## Change History:
+- 03/19/24
+  - Fixed letterhead to show NON-VAT Registration
 - 03/11/24
   - Changed 'billing' to 'billing statement'
   - Added note at preview page.
@@ -26,5 +29,6 @@ A simple billing form generator for my wife's business. To future me, deploying 
 - [ ] UI fixes
 - [x] Form switch between Quotation and Billing
 - [x] File name changes. Currently just saving as test.
-- [ ] Fix Responsiveness
+- [ ] Fix Responsiveness (?)
+  - Won't really be used on mobile devices, but worth looking into.
 - [ ] Refactor code
